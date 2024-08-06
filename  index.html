@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+   
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxs-store"></i>
+        <span class="logo_name">New Plugin</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="bx bx-list-ul"></i>
+            <span class="link_name">Product List</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Product List</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-slider-alt"></i>
+            <span class="link_name">Product Slider</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Product Slider</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-category"></i>
+            <span class="link_name">Product Category</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Product Category</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cart"></i>
+            <span class="link_name">Add To Cart</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Add To Cart</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-duplicate"></i>
+            <span class="link_name">Product Comparison</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Product Comparison</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-edit-alt"></i>
+            <span class="link_name">Order Tracking Form</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Order Tracking Form</a></li>
+          </ul>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+    
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"> Sidebar</span>
+      </div>
+      <div class="cards">
+        <h2 class="header">Responsive Cards</h2>
+        <div class="services">
+          <div class="content content-1">
+            <div class="fas fa-mobile fa-4x"></div>
+            <h2>Mobile</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+              ullam aliquid non eligendi, nemo est neque reiciendis error?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="content content-2">
+            <div class="fas fa-laptop fa-4x"></div>
+            <h2>Laptop</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+              ullam aliquid non eligendi, nemo est neque reiciendis error?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="content content-3">
+            <div class="fas fa-camera fa-4x"></div>
+            <h2>Camera</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+              ullam aliquid non eligendi, nemo est neque reiciendis error?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+      
+    </section>
+    <div>
+      
+    </div>
+
+    
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>
